@@ -5,17 +5,11 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #fa8513, #07244E); /* Gradient from Dorito red-orange to gold */
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite; /* Animate the gradient for a lively effect */
+  background: linear-gradient(135deg, #07244E 85%, #fa8513 15%); /* Static gradient dominated by 07244E */
+  background-size: cover;
   color: white;
 }
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 #canvas-container {
   position: relative;
   display: inline-block;
@@ -137,14 +131,14 @@ canvas {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #FCA311; /* Dorito orange button */
+    background-color: #fea515; /* Dorito orange button */
     color: #1A1A1A; /* Dark text color for contrast */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
   }
   button:hover {
-    background-color: #FF4500; /* Dorito red-orange on hover */
+    background-color: #de4e1c; /* Dorito red-orange on hover */
   }
   button:active {
     transform: scale(0.95);
@@ -156,14 +150,14 @@ canvas {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #FCA311; /* Dorito orange label */
+    background-color: #fea515; /* Dorito orange label */
     color: #1A1A1A; /* Dark text color for contrast */
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
   }
   label:hover {
-    background-color: #FF4500; /* Dorito red-orange on hover */
+    background-color: #de4e1c; /* Dorito red-orange on hover */
   }
   label:active {
     transform: scale(0.95);
