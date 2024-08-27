@@ -383,20 +383,44 @@ function applyGradientMapFilter(context, width, height) {
 }
 
 function applyGoldDustFilter(context, width, height) {
-  if (goldDustImage.complete) {  // Ensure the image is fully loaded
-    context.globalAlpha = 0.8;  // Adjust the transparency as needed
+  if (goldDustImage.complete && glitterImage.complete) {
+    // Apply Gold Dust
+    context.globalAlpha = 0.5;  // Adjust the transparency as needed for Gold Dust
     context.drawImage(goldDustImage, 0, 0, width, height);
+
+    // Apply Glitter on top of Gold Dust
+    context.globalAlpha = 0.5;  // Adjust the transparency as needed for Glitter
     context.drawImage(glitterImage, 0, 0, width, height);
+
     context.globalAlpha = 1.0;  // Reset the alpha for subsequent operations
   } else {
+    // Ensure both images are fully loaded before applying the filter
     goldDustImage.onload = () => {
-      context.globalAlpha = 0.8;
-      context.drawImage(goldDustImage, 0, 0, width, height);
-      context.drawImage(glitterImage, 0, 0, width, height);
-      context.globalAlpha = 1.0;
+      if (glitterImage.complete) {
+        context.globalAlpha = 0.5;
+        context.drawImage(goldDustImage, 0, 0, width, height);
+
+        context.globalAlpha = 0.5;
+        context.drawImage(glitterImage, 0, 0, width, height);
+
+        context.globalAlpha = 1.0;
+      }
+    };
+
+    glitterImage.onload = () => {
+      if (goldDustImage.complete) {
+        context.globalAlpha = 0.5;
+        context.drawImage(goldDustImage, 0, 0, width, height);
+
+        context.globalAlpha = 0.5;
+        context.drawImage(glitterImage, 0, 0, width, height);
+
+        context.globalAlpha = 1.0;
+      }
     };
   }
 }
+
 
 
 function applyLightFilter(context, width, height) {
