@@ -8,6 +8,10 @@ const goldDustImage = new Image();
 goldDustImage.src = "https://dorito-glasses-maker.netlify.app/GoldDust.png";
 goldDustImage.crossOrigin = "anonymous";
 
+const glitterImage = new Image();
+goldDustImage.src = "https://dorito-glasses-maker.netlify.app/Glitter.png";
+goldDustImage.crossOrigin = "anonymous";
+
 
 let canvasImage = new Image();
 let glasses = [];
@@ -380,13 +384,15 @@ function applyGradientMapFilter(context, width, height) {
 
 function applyGoldDustFilter(context, width, height) {
   if (goldDustImage.complete) {  // Ensure the image is fully loaded
-    context.globalAlpha = 0.5;  // Adjust the transparency as needed
+    context.globalAlpha = 0.8;  // Adjust the transparency as needed
     context.drawImage(goldDustImage, 0, 0, width, height);
+    context.drawImage(glitterImage, 0, 0, width, height);
     context.globalAlpha = 1.0;  // Reset the alpha for subsequent operations
   } else {
     goldDustImage.onload = () => {
-      context.globalAlpha = 0.5;
+      context.globalAlpha = 0.8;
       context.drawImage(goldDustImage, 0, 0, width, height);
+      context.drawImage(glitterImage, 0, 0, width, height);
       context.globalAlpha = 1.0;
     };
   }
