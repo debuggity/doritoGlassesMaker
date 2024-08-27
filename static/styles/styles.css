@@ -53,8 +53,8 @@ body {
   .control input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
     background-size: contain;
@@ -68,8 +68,8 @@ body {
   }
 
   .control input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
       background-size: contain;
@@ -83,8 +83,8 @@ body {
   }
 
   .control input[type="range"]::-ms-thumb {
-      width: 20px;
-      height: 20px;
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
       background-size: contain;
