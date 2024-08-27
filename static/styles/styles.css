@@ -1,0 +1,191 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+  }
+  #canvas-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  canvas {
+    border: 1px solid #000;
+  }
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  .controls-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 300px;
+  }
+
+  .control {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .control span {
+      color: white;
+      margin-right: 10px;
+  }
+
+  .control input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #32406C;
+      outline: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+      touch-action: none;
+  }
+
+  .control input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #2A334E;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.3s;
+  }
+
+  .control input[type="range"]::-webkit-slider-thumb:hover {
+      background: #3B4B7E;
+      transform: scale(1.1);
+  }
+
+  .control input[type="range"]::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #2A334E;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.3s;
+  }
+
+  .control input[type="range"]::-moz-range-thumb:hover {
+      background: #3B4B7E;
+      transform: scale(1.1);
+  }
+
+  .control input[type="range"]::-ms-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #2A334E;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s, transform 0.3s;
+  }
+
+  .control input[type="range"]::-ms-thumb:hover {
+      background: #3B4B7E;
+      transform: scale(1.1);
+  }
+
+  .control input[type="range"]::-moz-range-track {
+      background: #32406C;
+      border-radius: 5px;
+  }
+
+  .control input[type="range"]::-ms-track {
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+  }
+
+  .control input[type="range"]::-ms-fill-lower {
+      background: #32406C;
+      border-radius: 5px;
+  }
+
+  .control input[type="range"]::-ms-fill-upper {
+      background: #32406C;
+      border-radius: 5px;
+  }
+  .filter-options {
+      display: flex;
+      gap: 10px;
+  }
+
+  .filter-option {
+      padding: 5px 10px;
+      background-color: #333;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .filter-option.selected {
+      background-color: #f3040d;
+      transform: scale(1.1);
+  }
+
+  .filter-option:hover {
+      background-color: #E3A61D;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  button:hover {
+    background-color: #E3A61D;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  input[type="file"] {
+    display: none;
+  }
+  label {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  label:hover {
+    background-color: #E3A61D;
+  }
+  label:active {
+    transform: scale(0.95);
+  }
+  h1 {
+    color: white;
+  }
+  @media (max-width: 600px) {
+      #canvas-container {
+          max-width: 100%;
+          height: auto;
+      }
+
+      canvas {
+          width: 100%;
+          height: auto;
+      }
+  }
+  

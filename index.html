@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Maga Maker</title>
+    <link rel="stylesheet" href="static/styles/styles.css" />
+  </head>
+
+  <body>
+    <h1 id="h1-title">DARK PFP MAKER</h1>
+    <div id="canvas-container">
+      <canvas id="meme-canvas"></canvas>
+    </div>
+    <div class="button-container">
+      <label for="image-upload">Upload Image</label>
+      <input type="file" id="image-upload" accept="image/*" />
+      <button id="add-laser-button">Add Laser</button>
+      <button id="download-button">Download</button>
+    </div>
+    <div class="controls-container">
+      <div class="control">
+        <span>Resize Lasers:</span>
+        <input
+          type="range"
+          id="resize-slider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1.25"
+        />
+      </div>
+      <div class="control">
+        <span>Rotate Lasers:</span>
+        <input
+          type="range"
+          id="rotate-slider"
+          min="-180"
+          max="180"
+          step="1"
+          value="0"
+        />
+      </div>
+      <div class="control">
+        <span>Choose Filter:</span>
+        <div class="filter-options">
+          <div class="filter-option" data-filter="dark">Classic Red</div>
+          <div class="filter-option selected" data-filter="classic">Dark</div>
+          <div class="filter-option" data-filter="light">Light</div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="static/js/index.js"></script>
+  </body>
+</html>
