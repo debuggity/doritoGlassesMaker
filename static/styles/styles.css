@@ -15,7 +15,7 @@ body {
   display: inline-block;
   margin-bottom: 20px;
   padding: 10px;
-  border: 5px solid #683a22; /* Gold border around the canvas */
+  border: 5px solid #FF4500; /* Gold border around the canvas */
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
   background: rgba(255, 255, 255, 0.1); /* Slightly translucent white background */
