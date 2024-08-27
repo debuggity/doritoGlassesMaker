@@ -1,20 +1,35 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #1A1A1A;
-  }
-  #canvas-container {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 20px;
-  }
-  canvas {
-    border: 1px solid #FCA311; /* Dorito orange border */
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff936c, #fdee9b); /* Gradient from Dorito red-orange to gold */
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite; /* Animate the gradient for a lively effect */
+  color: white;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+#canvas-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 5px solid #FFD700; /* Gold border around the canvas */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  background: rgba(255, 255, 255, 0.1); /* Slightly translucent white background */
+}
+canvas {
+  border: 2px solid #FFD700; /* Gold border for the canvas */
+  border-radius: 5px;
+}
   .button-container {
     display: flex;
     gap: 10px;
