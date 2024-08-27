@@ -51,19 +51,19 @@ body {
   }
 
   .control input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: #2A334E;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s, transform 0.3s;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
   }
 
   .control input[type="range"]::-webkit-slider-thumb:hover {
-      background: #3B4B7E;
       transform: scale(1.1);
   }
 
@@ -71,14 +71,14 @@ body {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #2A334E;
+      background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
+      background-size: contain;
       cursor: pointer;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s, transform 0.3s;
+      transition: transform 0.3s;
   }
 
   .control input[type="range"]::-moz-range-thumb:hover {
-      background: #3B4B7E;
       transform: scale(1.1);
   }
 
@@ -86,16 +86,17 @@ body {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background: #2A334E;
+      background: url('https://dorito-glasses-maker.netlify.app/DoritoChip.png') no-repeat center center;
+      background-size: contain;
       cursor: pointer;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s, transform 0.3s;
+      transition: transform 0.3s;
   }
 
   .control input[type="range"]::-ms-thumb:hover {
-      background: #3B4B7E;
       transform: scale(1.1);
   }
+
 
   .control input[type="range"]::-moz-range-track {
       background: #32406C;
