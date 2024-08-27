@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #07244E;
+  background-color: #5a82bb;
   background-size: cover;
   color: white;
 }
@@ -21,7 +21,7 @@ body {
   background: rgba(255, 255, 255, 0.1); /* Slightly translucent white background */
 }
 canvas {
-  border: 2px solid #683a22; /* Gold border for the canvas */
+  border: 2px solid #FF4500; /* Gold border for the canvas */
   border-radius: 5px;
 }
   .button-container {
