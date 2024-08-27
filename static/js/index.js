@@ -1,11 +1,11 @@
 const canvas = document.getElementById("meme-canvas");
 const ctx = canvas.getContext("2d", { willReadFrequently: true });
 const doritoTemplate = new Image();
-doritoTemplate.src = "https://dmagafy.netlify.app/DoritoGlasses.png";
+doritoTemplate.src = "https://dorito-glasses-maker.netlify.app/DoritoGlasses.png";
 doritoTemplate.crossOrigin = "anonymous";
 
 const goldDustImage = new Image();
-goldDustImage.src = "https://dmagafy.netlify.app/GoldDust.png";
+goldDustImage.src = "https://dorito-glasses-maker.netlify.app/GoldDust.png";
 goldDustImage.crossOrigin = "anonymous";
 
 
@@ -54,49 +54,49 @@ document.getElementById("image-upload").addEventListener("change", function (e) 
   reader.readAsDataURL(e.target.files[0]);
 });
 
-document.getElementById("add-dorrito-button").addEventListener("click", function () {
+document.getElementById("add-dorito-button").addEventListener("click", function () {
   const aspectRatio = doritoTemplate.width / doritoTemplate.height;
   
-  let dorritoWidth = (canvas.width / 5) * 3; // Double the size
-  let dorritoHeight = dorritoWidth / aspectRatio; // Adjust height based on aspect ratio
+  let doritoWidth = (canvas.width / 5) * 3; // Double the size
+  let doritoHeight = doritoWidth / aspectRatio; // Adjust height based on aspect ratio
 
-  if (dorritoHeight > canvas.height) {
-    dorritoHeight = (canvas.height / 5) * 3;
-    dorritoWidth = dorritoHeight * aspectRatio;
+  if (doritoHeight > canvas.height) {
+    doritoHeight = (canvas.height / 5) * 3;
+    doritoWidth = doritoHeight * aspectRatio;
   }
   
-  const dorrito = {
+  const dorito = {
     image: doritoTemplate,
-    width: dorritoWidth,
-    height: dorritoHeight,
-    x: canvas.width / 2 - dorritoWidth / 2,
-    y: canvas.height / 2 - dorritoHeight / 2,
+    width: doritoWidth,
+    height: doritoHeight,
+    x: canvas.width / 2 - doritoWidth / 2,
+    y: canvas.height / 2 - doritoHeight / 2,
     rotation: 0,
   };
-  glasses.push(dorrito);
+  glasses.push(dorito);
   drawCanvas();
 });
 
 document.getElementById("resize-slider").addEventListener("input", function (e) {
   const scale = e.target.value;
-  glasses.forEach((dorrito) => {
-    const aspectRatio = dorrito.image.width / dorrito.image.height;
-    const centerX = dorrito.x + dorrito.width / 2;
-    const centerY = dorrito.y + dorrito.height / 2;
+  glasses.forEach((dorito) => {
+    const aspectRatio = dorito.image.width / dorito.image.height;
+    const centerX = dorito.x + dorito.width / 2;
+    const centerY = dorito.y + dorito.height / 2;
 
-    dorrito.width = (canvas.width / 5) * scale * 2;
-    dorrito.height = dorrito.width / aspectRatio;
+    dorito.width = (canvas.width / 5) * scale * 2;
+    dorito.height = dorito.width / aspectRatio;
 
-    dorrito.x = centerX - dorrito.width / 2;
-    dorrito.y = centerY - dorrito.height / 2;
+    dorito.x = centerX - dorito.width / 2;
+    dorito.y = centerY - dorito.height / 2;
   });
   drawCanvas();
 });
 
 document.getElementById("rotate-slider").addEventListener("input", function (e) {
   const rotation = (e.target.value * Math.PI) / 180;
-  glasses.forEach((dorrito) => {
-    dorrito.rotation = rotation;
+  glasses.forEach((dorito) => {
+    dorito.rotation = rotation;
   });
   drawCanvas();
 });
@@ -116,24 +116,24 @@ canvas.addEventListener("mousedown", function (e) {
   currentGlasses = null;
   let closestDistance = Infinity;
 
-  glasses.forEach((dorrito) => {
-    const centerX = dorrito.x + dorrito.width / 2;
-    const centerY = dorrito.y + dorrito.height / 2;
+  glasses.forEach((dorito) => {
+    const centerX = dorito.x + dorito.width / 2;
+    const centerY = dorito.y + dorito.height / 2;
     const distance = Math.sqrt(
       Math.pow(mouseX - centerX, 2) + Math.pow(mouseY - centerY, 2)
     );
 
     if (
-      mouseX > dorrito.x &&
-      mouseX < dorrito.x + dorrito.width &&
-      mouseY > dorrito.y &&
-      mouseY < dorrito.y + dorrito.height &&
+      mouseX > dorito.x &&
+      mouseX < dorito.x + dorito.width &&
+      mouseY > dorito.y &&
+      mouseY < dorito.y + dorito.height &&
       distance < closestDistance
     ) {
-      dorrito.isDragging = true;
-      offsetX = mouseX - dorrito.x;
-      offsetY = mouseY - dorrito.y;
-      currentGlasses = dorrito;
+      dorito.isDragging = true;
+      offsetX = mouseX - dorito.x;
+      offsetY = mouseY - dorito.y;
+      currentGlasses = dorito;
       closestDistance = distance;
     }
   });
