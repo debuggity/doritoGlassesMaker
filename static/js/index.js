@@ -9,8 +9,8 @@ goldDustImage.src = "https://dorito-glasses-maker.netlify.app/GoldDust.png";
 goldDustImage.crossOrigin = "anonymous";
 
 const glitterImage = new Image();
-goldDustImage.src = "https://dorito-glasses-maker.netlify.app/Glitter.png";
-goldDustImage.crossOrigin = "anonymous";
+glitterImage.src = "https://dorito-glasses-maker.netlify.app/Glitter.png";
+glitterImage.crossOrigin = "anonymous";
 
 
 let canvasImage = new Image();
@@ -385,11 +385,11 @@ function applyGradientMapFilter(context, width, height) {
 function applyGoldDustFilter(context, width, height) {
   if (goldDustImage.complete && glitterImage.complete) {
     // Apply Gold Dust
-    context.globalAlpha = 0.5;  // Adjust the transparency as needed for Gold Dust
+    context.globalAlpha = 0.8;  // Adjust the transparency as needed for Gold Dust
     context.drawImage(goldDustImage, 0, 0, width, height);
 
     // Apply Glitter on top of Gold Dust
-    context.globalAlpha = 0.5;  // Adjust the transparency as needed for Glitter
+    context.globalAlpha = 1.0;  // Adjust the transparency as needed for Glitter
     context.drawImage(glitterImage, 0, 0, width, height);
 
     context.globalAlpha = 1.0;  // Reset the alpha for subsequent operations
